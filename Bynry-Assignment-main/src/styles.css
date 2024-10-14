@@ -1,0 +1,278 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.project-title{
+  margin-top: 10px;
+  color: snow;
+  font-family: "McLaren", cursive;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: whitesmoke;
+  padding: 0 16px;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Arrange children vertically */
+  min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+}
+
+header {
+  background-color: #e0524f;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 2.5rem; /* Adjust height */
+  background-color: black;
+  padding: 10px;
+  margin-top: auto; /* Push the footer to the bottom */
+  font-family: "McLaren", cursive;
+}
+
+footer p {
+  color: white;
+}
+
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #e05e47;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+}
+
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.Header-button {
+  background-color: #e0524f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "McLaren", cursive;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-container button {
+  background-color: #e0524f; /* Button background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding for button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin: 0 5px; /* Space between buttons */
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.button-container button:hover {
+  background-color: #c0413e; /* Darker shade on hover */
+}
+
+.search-bar {
+  width: 700px; /* Increased width for a bigger search bar */
+  height: 80px; /* Increased height for a bigger search bar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto; /* Added margin to keep distance between search bar and header */
+  border: none;
+  padding: 15px; /* Increased padding for a bigger search bar */
+  border-radius: 15px;
+}
+
+.search-bar input {
+  width: 100%; /* Make input take full width of the search bar */
+  height: 100%; /* Make input take full height of the search bar */
+  padding: 10px; /* Adjust padding for better appearance */
+  border: none; /* Remove default border */
+  border-radius: 15px; /* Match border radius with the search bar */
+}
+
+.profile-container {
+  display: flex; /* Use flexbox for the container */
+  justify-content: space-between; /* Space out the profile cards */
+  flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
+  margin: 20px; /* Margin around the container */
+}
+
+.profile-card {
+  display: flex; /* Use flexbox for the card layout */
+  align-items: center; /* Center items vertically */
+  padding: 15px; /* Add some padding */
+  border: 1px solid #ccc; /* Border for the card */
+  border-radius: 8px; /* Rounded corners */
+  margin: 10px; /* Margin between cards */
+  background-color: #f9f9f9; /* Background color */
+  flex: 1 1 30%; /* Allow cards to grow and shrink, with a base width of 30% */
+  max-width: 300px; /* Optional: set a max width for each card */
+}
+
+.profile-image {
+  width: 60px; /* Set width for the profile image */
+  height: 60px; /* Set height for the profile image */
+  border-radius: 50%; /* Make the image circular */
+  margin-right: 15px; /* Space between image and details */
+}
+
+.profile-details {
+  flex-grow: 1; /* Allow details to take remaining space */
+  display: flex; /* Use flexbox for details layout */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.summary-button {
+  align-self: flex-end; /* Align button to the right */
+  padding: 5px 10px; /* Button padding */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 3px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-bottom: 5px; /* Space below the button */
+}
+
+.summary-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.profile-name {
+  font-size: 1.2em; /* Font size for the name */
+  margin: 0; /* Remove default margin */
+}
+
+.profile-description {
+  font-size: 0.9em; /* Font size for the description */
+  color: #666; /* Color for the description text */
+  margin: 0; /* Remove default margin */
+}
+
+.content-container {
+  flex: 1; /* This allows the content to take up available space */
+  display: flex;
+  flex-direction: column; /* Stack profile cards and summaries vertically */
+  justify-content: flex-start; /* Align content at the top */
+}
+
+.summary-container {
+  background: #fff; /* Optional: Background color for summary */
+  padding: 15px; /* Optional: Padding for summary */
+  border-radius: 7px; /* Optional: Rounded corners for summary */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); /* Optional: Shadow for summary */
+  margin: 20px 0; /* Optional: Margin around the summary */
+}
+
+.content {
+  flex: 1; /* This will make the content area take the remaining space */
+  /* Any other styles you may want for the content */
+}
+
+.summary-container {
+  padding: 20px; /* Add some padding around the container */
+}
+
+.name {
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 10px; /* Space below the name */
+}
+
+.description {
+  margin-bottom: 15px; /* Space below the description */
+}
+
+.additional-info p {
+  margin-bottom: 10px; /* Space between each info line */
+}
+
+input[type="text"] {
+  margin: 25px;
+  padding: 10px;
+  width: 100%; 
+  border: 5px solid #ccc;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  margin-left: 0%;
+}
+
